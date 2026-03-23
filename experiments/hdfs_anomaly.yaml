@@ -1,0 +1,43 @@
+experiment:
+  name: hdfs_full_dataset_llm_evaluation
+  description: Full HDFS dataset (575K sequences) with LLM-based anomaly detection and evaluation
+
+  dataset:
+    name: hdfs
+    params:
+      split: full  # Use full dataset with labels
+
+  deploy_workload: false
+
+  anomaly_detection:
+    enabled: true
+    method: llm_analysis  # Use LLM for anomaly detection
+    params:
+      sample_size: 50  # Analyze 50 sequences (mix of normal and anomalous)
+      confidence_threshold: 0.7
+      focus_on_anomalous: true  # Prioritize anomalous sequences
+      max_normal_samples: 25    # Limit normal sequences to manage costs
+
+  rca:
+    enabled: true
+    use_llm: true
+    llm_params:
+      temperature: 0.3  # Lower temperature for more consistent analysis
+      max_tokens: 2000
+      focus_on_anomalous: true  # Only analyze anomalous sequences
+
+  evaluation:
+    enabled: true
+    metrics:
+      - precision
+      - recall
+      - f1_score
+      - confusion_matrix
+    generate_report: true
+    suggest_improvements: true
+    
+  dataset_info:
+    total_sequences: 575061
+    anomalous_sequences: 16838
+    anomaly_rate: 0.0293
+    log_lines: 11175629

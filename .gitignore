@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+datasets/*
+!datasets/.gitkeep
+experiments/results/
+.ipynb_checkpoints
+.env
+.venv
+venv/
+*.egg-info/
+dist/
+build/
+.kube/

@@ -1,0 +1,25 @@
+services:
+  aiopslab:
+    build: .
+    container_name: aiopslab-framework
+    privileged: true
+    ports:
+      - "8000:8000"  # AIOpsLab API
+      - "6443:6443"  # kind API server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./aiopslab:/aiopslab/aiopslab
+      - ./datasets:/aiopslab/datasets
+      - ./experiments:/aiopslab/experiments
+      - ./configs:/aiopslab/configs
+      - kind-data:/var/lib/docker
+    environment:
+      - AIOPSLAB_HOME=/aiopslab
+      - KUBECONFIG=/root/.kube/config
+      - LLM_AGENT_ENABLED=true
+    env_file:
+      - .env
+    command: tail -f /dev/null
+
+volumes:
+  kind-data:
