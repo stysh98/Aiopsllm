@@ -13,7 +13,7 @@ class AIOpsLab:
         llm_config = self.config.get("llm", {})
         llm_config.update({
             "provider": os.getenv("LLM_PROVIDER", "groq"),
-            "model": os.getenv("LLM_MODEL", "llama-3.1-8b-instant")
+            "model": os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
         })
         self.llm_agent = LLMAgent(llm_config)
         self.dataset_adapter = DatasetAdapter(self.config.get("datasets", {}))

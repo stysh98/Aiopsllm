@@ -1,0 +1,582 @@
+{
+  "llama-3.1-8b-instant": {
+    "metrics": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 15,
+      "fn": 15,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "accuracy": 0.5,
+      "elapsed_sec": 127.1,
+      "errors": 0,
+      "model": "llama-3.1-8b-instant",
+      "provider": "groq"
+    },
+    "predictions": [
+      {
+        "block_id": "blk_-7293272073748314563",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8990396203057646559",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7409100024045179646",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_3418996237981684032",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8956029894348668245",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8074764299476278402",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_3888635850409849568",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8413730281224501690",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-6877696701654867296",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-6744501669016713784",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_4624916250773145759",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7936423389955810426",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8135292087230413975",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_2458020460306154509",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8486355478273768083",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_1239909128373552502",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_4416660016226859472",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_6121212718624278543",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8756305378882356508",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7688878104984545100",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_3837161082742671754",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-2828839543885026602",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8281945757273050140",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7146075618207518599",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-3193897258890652655",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_4082071052002133707",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8013855621109800549",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7251600344459961283",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-1052739769153545987",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-7486457612086258197",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      }
+    ],
+    "ground_truth": [
+      {
+        "block_id": "blk_-7293272073748314563",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_-8990396203057646559",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_7409100024045179646",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_3418996237981684032",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8956029894348668245",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8074764299476278402",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_3888635850409849568",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8413730281224501690",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_-6877696701654867296",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_-6744501669016713784",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_4624916250773145759",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_7936423389955810426",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8135292087230413975",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_2458020460306154509",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8486355478273768083",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_1239909128373552502",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_4416660016226859472",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_6121212718624278543",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-8756305378882356508",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_7688878104984545100",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_3837161082742671754",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-2828839543885026602",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-8281945757273050140",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_7146075618207518599",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-3193897258890652655",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_4082071052002133707",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-8013855621109800549",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_7251600344459961283",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-1052739769153545987",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-7486457612086258197",
+        "actual_anomaly": false
+      }
+    ]
+  },
+  "llama-3.3-70b-versatile": {
+    "metrics": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 15,
+      "fn": 15,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "accuracy": 0.5,
+      "elapsed_sec": 63.8,
+      "errors": 0,
+      "model": "llama-3.3-70b-versatile",
+      "provider": "groq"
+    },
+    "predictions": [
+      {
+        "block_id": "blk_-7293272073748314563",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8990396203057646559",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7409100024045179646",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_3418996237981684032",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8956029894348668245",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8074764299476278402",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_3888635850409849568",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8413730281224501690",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-6877696701654867296",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-6744501669016713784",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_4624916250773145759",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7936423389955810426",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8135292087230413975",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_2458020460306154509",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_8486355478273768083",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_1239909128373552502",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_4416660016226859472",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_6121212718624278543",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8756305378882356508",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7688878104984545100",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_3837161082742671754",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-2828839543885026602",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8281945757273050140",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7146075618207518599",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-3193897258890652655",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_4082071052002133707",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-8013855621109800549",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_7251600344459961283",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-1052739769153545987",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      },
+      {
+        "block_id": "blk_-7486457612086258197",
+        "predicted_anomaly": false,
+        "confidence": 0.7
+      }
+    ],
+    "ground_truth": [
+      {
+        "block_id": "blk_-7293272073748314563",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_-8990396203057646559",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_7409100024045179646",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_3418996237981684032",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8956029894348668245",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8074764299476278402",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_3888635850409849568",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8413730281224501690",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_-6877696701654867296",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_-6744501669016713784",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_4624916250773145759",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_7936423389955810426",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8135292087230413975",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_2458020460306154509",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_8486355478273768083",
+        "actual_anomaly": true
+      },
+      {
+        "block_id": "blk_1239909128373552502",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_4416660016226859472",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_6121212718624278543",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-8756305378882356508",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_7688878104984545100",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_3837161082742671754",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-2828839543885026602",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-8281945757273050140",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_7146075618207518599",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-3193897258890652655",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_4082071052002133707",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-8013855621109800549",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_7251600344459961283",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-1052739769153545987",
+        "actual_anomaly": false
+      },
+      {
+        "block_id": "blk_-7486457612086258197",
+        "actual_anomaly": false
+      }
+    ]
+  }
+}

@@ -18,7 +18,7 @@ class LLMAgent:
     def __init__(self, config: Dict[str, Any]):
         self.config = config
         self.provider = LLMProvider(config.get("provider", "groq"))
-        self.model = config.get("model", "llama-3.1-8b-instant")
+        self.model = config.get("model", "llama-3.3-70b-versatile")
         self.client = self._initialize_client()
 
     def _initialize_client(self):
@@ -245,7 +245,12 @@ IMPORTANT: Base your analysis ONLY on the provided evidence. Do not make assumpt
 
     def _build_hdfs_anomaly_prompt(self, sequence_data: Dict[str, Any]) -> str:
         block_id = sequence_data.get('block_id', 'unknown')
+        # fall back to templates or raw logs if log_sequence is empty
         log_sequence = sequence_data.get('log_sequence', [])
+        if not log_sequence:
+            log_sequence = sequence_data.get('templates', [])
+        if not log_sequence:
+            log_sequence = [l.get('content', l.get('raw_line', str(l))) for l in sequence_data.get('logs', [])]
         components = sequence_data.get('components', [])
 
         formatted_logs = [f"{i}. {entry}" for i, entry in enumerate(log_sequence, 1)]
