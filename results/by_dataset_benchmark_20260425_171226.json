@@ -1,0 +1,1206 @@
+{
+  "hdfs": {
+    "openai/gpt-oss-120b": {
+      "display_name": "GPT-OSS 120B",
+      "metrics": {
+        "tp": 10,
+        "fp": 15,
+        "tn": 0,
+        "fn": 5,
+        "precision": 0.4,
+        "recall": 0.6666666666666666,
+        "f1": 0.5,
+        "accuracy": 0.3333333333333333,
+        "elapsed_sec": 338.4,
+        "errors": 0,
+        "model": "openai/gpt-oss-120b",
+        "display_name": "GPT-OSS 120B",
+        "provider": "groq"
+      },
+      "predictions": [
+        {
+          "block_id": "blk_-4533749505208853654",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_5585072076669843255",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8729162853545308118",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8239617037971499474",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5447417104355795463",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_1968107584907454835",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-1704356550921684323",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_348548634648842426",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_8902874290653812711",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-4269455850074860629",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-30639162771126691",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9089233838444061529",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8222688825752575045",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-7261016699776316248",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-730360888507267446",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_8573973636575611103",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2576579059491723435",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-3876575027880456041",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6678472565712118087",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9069966081657556515",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-3901171193985872487",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8257277173936543986",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7284288610645148533",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9210346052555304090",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8072327513655359852",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5197568757166382826",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7352609810175565501",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8155607960458082281",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7475438553401908725",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3444182709176827855",
+          "predicted_anomaly": true
+        }
+      ],
+      "ground_truth": [
+        {
+          "block_id": "blk_-4533749505208853654",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_5585072076669843255",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8729162853545308118",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8239617037971499474",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-5447417104355795463",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_1968107584907454835",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-1704356550921684323",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_348548634648842426",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8902874290653812711",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-4269455850074860629",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-30639162771126691",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9089233838444061529",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8222688825752575045",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-7261016699776316248",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-730360888507267446",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8573973636575611103",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2576579059491723435",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-3876575027880456041",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_6678472565712118087",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_9069966081657556515",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-3901171193985872487",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8257277173936543986",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7284288610645148533",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_9210346052555304090",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8072327513655359852",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5197568757166382826",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7352609810175565501",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8155607960458082281",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7475438553401908725",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_3444182709176827855",
+          "actual_anomaly": false
+        }
+      ]
+    },
+    "qwen/qwen3-32b": {
+      "display_name": "Qwen3 32B",
+      "metrics": {
+        "tp": 9,
+        "fp": 15,
+        "tn": 0,
+        "fn": 6,
+        "precision": 0.375,
+        "recall": 0.6,
+        "f1": 0.4615384615384615,
+        "accuracy": 0.3,
+        "elapsed_sec": 694.3,
+        "errors": 0,
+        "model": "qwen/qwen3-32b",
+        "display_name": "Qwen3 32B",
+        "provider": "groq"
+      },
+      "predictions": [
+        {
+          "block_id": "blk_-4533749505208853654",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_5585072076669843255",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8729162853545308118",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8239617037971499474",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5447417104355795463",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_1968107584907454835",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-1704356550921684323",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_348548634648842426",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8902874290653812711",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-4269455850074860629",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-30639162771126691",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9089233838444061529",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_8222688825752575045",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-7261016699776316248",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-730360888507267446",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_8573973636575611103",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2576579059491723435",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-3876575027880456041",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6678472565712118087",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9069966081657556515",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-3901171193985872487",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8257277173936543986",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7284288610645148533",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9210346052555304090",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8072327513655359852",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5197568757166382826",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7352609810175565501",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8155607960458082281",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7475438553401908725",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3444182709176827855",
+          "predicted_anomaly": true
+        }
+      ],
+      "ground_truth": [
+        {
+          "block_id": "blk_-4533749505208853654",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_5585072076669843255",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8729162853545308118",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8239617037971499474",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-5447417104355795463",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_1968107584907454835",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-1704356550921684323",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_348548634648842426",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8902874290653812711",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-4269455850074860629",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-30639162771126691",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9089233838444061529",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8222688825752575045",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-7261016699776316248",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-730360888507267446",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8573973636575611103",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2576579059491723435",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-3876575027880456041",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_6678472565712118087",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_9069966081657556515",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-3901171193985872487",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8257277173936543986",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7284288610645148533",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_9210346052555304090",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8072327513655359852",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5197568757166382826",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7352609810175565501",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8155607960458082281",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7475438553401908725",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_3444182709176827855",
+          "actual_anomaly": false
+        }
+      ]
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "display_name": "Llama 4 Scout 17B",
+      "metrics": {
+        "tp": 12,
+        "fp": 15,
+        "tn": 0,
+        "fn": 3,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1": 0.5714285714285714,
+        "accuracy": 0.4,
+        "elapsed_sec": 45.7,
+        "errors": 0,
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "display_name": "Llama 4 Scout 17B",
+        "provider": "groq"
+      },
+      "predictions": [
+        {
+          "block_id": "blk_-4533749505208853654",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_5585072076669843255",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8729162853545308118",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8239617037971499474",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5447417104355795463",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_1968107584907454835",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-1704356550921684323",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_348548634648842426",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8902874290653812711",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-4269455850074860629",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-30639162771126691",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9089233838444061529",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8222688825752575045",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-7261016699776316248",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-730360888507267446",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8573973636575611103",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2576579059491723435",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-3876575027880456041",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6678472565712118087",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9069966081657556515",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-3901171193985872487",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8257277173936543986",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7284288610645148533",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9210346052555304090",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8072327513655359852",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5197568757166382826",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7352609810175565501",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8155607960458082281",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7475438553401908725",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3444182709176827855",
+          "predicted_anomaly": true
+        }
+      ],
+      "ground_truth": [
+        {
+          "block_id": "blk_-4533749505208853654",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_5585072076669843255",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8729162853545308118",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8239617037971499474",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-5447417104355795463",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_1968107584907454835",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-1704356550921684323",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_348548634648842426",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8902874290653812711",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-4269455850074860629",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-30639162771126691",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9089233838444061529",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8222688825752575045",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-7261016699776316248",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-730360888507267446",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8573973636575611103",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2576579059491723435",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-3876575027880456041",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_6678472565712118087",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_9069966081657556515",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-3901171193985872487",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8257277173936543986",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7284288610645148533",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_9210346052555304090",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8072327513655359852",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5197568757166382826",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7352609810175565501",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8155607960458082281",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7475438553401908725",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_3444182709176827855",
+          "actual_anomaly": false
+        }
+      ]
+    }
+  },
+  "rcaeval": {
+    "openai/gpt-oss-120b": {
+      "display_name": "GPT-OSS 120B",
+      "metrics": {
+        "total": 11,
+        "service_accuracy": 0.545,
+        "fault_accuracy": 0.0,
+        "both_accuracy": 0.0,
+        "avg_confidence": 0.656,
+        "elapsed_sec": 41.1,
+        "errors": 0,
+        "model": "openai/gpt-oss-120b",
+        "display_name": "GPT-OSS 120B",
+        "provider": "groq"
+      },
+      "results": [
+        {
+          "case_id": "RE1-TT_ts-travel-service_cpu_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-travel-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "cpu",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-train-service_delay_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-train-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-auth-service_disk_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-auth-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "disk",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE3-OB_emailservice_f1_1",
+          "predicted_service": "emailservice",
+          "actual_service": "emailservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f1",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.78
+        },
+        {
+          "case_id": "RE3-OB_emailservice_f2_1",
+          "predicted_service": "emailservice",
+          "actual_service": "emailservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f2",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.78
+        },
+        {
+          "case_id": "RE3-OB_adservice_f3_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f3",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.78
+        },
+        {
+          "case_id": "RE3-OB_adservice_f4_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f4",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.87
+        },
+        {
+          "case_id": "RE3-OB_adservice_f5_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f5",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.78
+        },
+        {
+          "case_id": "RE1-TT_ts-travel-service_loss_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-travel-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-train-service_mem_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-train-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "mem",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE2-OB_recommendationservice_socket_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "recommendationservice",
+          "predicted_fault": "delay",
+          "actual_fault": "socket",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.73
+        }
+      ]
+    },
+    "qwen/qwen3-32b": {
+      "display_name": "Qwen3 32B",
+      "metrics": {
+        "total": 11,
+        "service_accuracy": 0.182,
+        "fault_accuracy": 0.0,
+        "both_accuracy": 0.0,
+        "avg_confidence": 0.705,
+        "elapsed_sec": 70.5,
+        "errors": 0,
+        "model": "qwen/qwen3-32b",
+        "display_name": "Qwen3 32B",
+        "provider": "groq"
+      },
+      "results": [
+        {
+          "case_id": "RE1-TT_ts-travel-service_cpu_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-travel-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "cpu",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-train-service_delay_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-train-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-auth-service_disk_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-auth-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "disk",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE3-OB_emailservice_f1_1",
+          "predicted_service": "frontend",
+          "actual_service": "emailservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f1",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE3-OB_emailservice_f2_1",
+          "predicted_service": "frontend",
+          "actual_service": "emailservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f2",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.7
+        },
+        {
+          "case_id": "RE3-OB_adservice_f3_1",
+          "predicted_service": "frontend",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f3",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.85
+        },
+        {
+          "case_id": "RE3-OB_adservice_f4_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f4",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.85
+        },
+        {
+          "case_id": "RE3-OB_adservice_f5_1",
+          "predicted_service": "frontend",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f5",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-TT_ts-travel-service_loss_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-travel-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-train-service_mem_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-train-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "mem",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE2-OB_recommendationservice_socket_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "recommendationservice",
+          "predicted_fault": "delay",
+          "actual_fault": "socket",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        }
+      ]
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "display_name": "Llama 4 Scout 17B",
+      "metrics": {
+        "total": 11,
+        "service_accuracy": 0.091,
+        "fault_accuracy": 0.0,
+        "both_accuracy": 0.0,
+        "avg_confidence": 0.664,
+        "elapsed_sec": 7.7,
+        "errors": 0,
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "display_name": "Llama 4 Scout 17B",
+        "provider": "groq"
+      },
+      "results": [
+        {
+          "case_id": "RE1-TT_ts-travel-service_cpu_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-travel-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "cpu",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-train-service_delay_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-train-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-auth-service_disk_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-auth-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "disk",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE3-OB_emailservice_f1_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "emailservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f1",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.8
+        },
+        {
+          "case_id": "RE3-OB_emailservice_f2_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "emailservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f2",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.8
+        },
+        {
+          "case_id": "RE3-OB_adservice_f3_1",
+          "predicted_service": "currencyservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f3",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.8
+        },
+        {
+          "case_id": "RE3-OB_adservice_f4_1",
+          "predicted_service": "frontend",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f4",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.8
+        },
+        {
+          "case_id": "RE3-OB_adservice_f5_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "f5",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.8
+        },
+        {
+          "case_id": "RE1-TT_ts-travel-service_loss_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-travel-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-TT_ts-train-service_mem_1",
+          "predicted_service": "unknown",
+          "actual_service": "ts-train-service",
+          "predicted_fault": "unknown",
+          "actual_fault": "mem",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE2-OB_recommendationservice_socket_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "recommendationservice",
+          "predicted_fault": "delay",
+          "actual_fault": "socket",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.8
+        }
+      ]
+    }
+  }
+}
