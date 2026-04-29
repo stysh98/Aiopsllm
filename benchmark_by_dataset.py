@@ -52,19 +52,26 @@ Reason: [brief explanation]"""
 # ── RCAEval config ─────────────────────────────────────────────────────────
 RCAEVAL_SAMPLE_SIZE = 20   # RCA is slower/heavier; keep manageable
 
-RCAEVAL_SYSTEM_PROMPT = """You are an expert in microservice system root cause analysis.
-Analyze the provided metrics, logs, and traces to identify the root cause of the failure.
+RCAEVAL_SYSTEM_PROMPT = """You are an expert in microservice root cause analysis.
+A fault has been injected into one service in the system. Your job is to identify WHICH service
+and WHAT type of fault it is, using the metric anomaly signals provided.
 
-Focus on:
-- Which service is the root cause (not just a downstream victim)
-- What type of fault it is (cpu/mem/disk/delay/loss)
-- Evidence from metrics, logs, and traces that supports your conclusion
+Key principle: the root cause service will show a dramatic spike in ONE metric type
+(cpu/mem/disk/latency/error-rate) right after the fault injection time. Other services
+may show mild downstream effects but will NOT have the same magnitude spike.
 
-Respond ONLY with:
-Root Cause Service: [service name]
-Fault Type: [cpu/mem/disk/delay/loss/other]
+Fault type definitions:
+- cpu:   CPU usage spikes to near 100% on the root cause service
+- mem:   Memory usage grows abnormally on the root cause service
+- disk:  Disk I/O or disk usage spikes on the root cause service
+- delay: Latency/response-time spikes sharply on the root cause service
+- loss:  Error rate or packet loss spikes on the root cause service
+
+Respond ONLY with these exact lines:
+Root Cause Service: [service name, e.g. adservice]
+Fault Type: [cpu/mem/disk/delay/loss]
 Confidence: [0-100]%
-Reason: [brief explanation]"""
+Reason: [one sentence citing the specific metric and its before/after values]"""
 
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -144,93 +151,219 @@ def load_rcaeval_sample():
     if not sequences:
         print("  ⚠  No RCAEval sequences found — skipping RCAEval benchmark")
         return []
-    # Sample evenly across fault types
+
     from collections import defaultdict
+
+    # Prefer Online Boutique (OB) cases — they have 12 services (clean signal)
+    # vs Train Ticket (60+ services) or Sock Shop.
+    # Within OB, prefer RE1-OB (metrics only, very clean) then RE2-OB (has logs+traces).
+    # Use instance=1 only to keep one representative per scenario.
+    system_priority = {"online-boutique": 0, "sock-shop": 1, "train-ticket": 2}
+    bench_priority  = {"re1": 0, "re2": 1, "re3": 2}
+
+    sequences_with_metrics = [
+        s for s in sequences
+        if s.get("has_metrics") and s.get("instance", 1) == 1
+    ]
+    sequences_with_metrics.sort(key=lambda s: (
+        system_priority.get(s.get("system", "train-ticket"), 2),
+        bench_priority.get(s.get("benchmark", "re3"), 2),
+    ))
+
+    # Sample evenly across the 5 core fault types
+    core_faults = ["cpu", "mem", "disk", "delay", "loss"]
     by_fault = defaultdict(list)
-    for s in sequences:
-        by_fault[s.get("fault_type", "unknown")].append(s)
+    for s in sequences_with_metrics:
+        ft = s.get("fault_type", "unknown")
+        if ft in core_faults:
+            by_fault[ft].append(s)
+
+    # Within each fault type, pick different services (not 4 instances of the same one)
+    per_fault = max(1, RCAEVAL_SAMPLE_SIZE // len(core_faults))
     sample = []
-    per_fault = max(1, RCAEVAL_SAMPLE_SIZE // max(len(by_fault), 1))
-    for ft, cases in sorted(by_fault.items()):
-        sample.extend(cases[:per_fault])
+    for ft in core_faults:
+        cases = by_fault[ft]
+        # Pick one case per unique service, up to per_fault
+        seen_services = set()
+        picked = []
+        for c in cases:
+            svc = c.get("service", "unknown")
+            if svc not in seen_services:
+                seen_services.add(svc)
+                picked.append(c)
+            if len(picked) >= per_fault:
+                break
+        sample.extend(picked)
     sample = sample[:RCAEVAL_SAMPLE_SIZE]
+
     print(f"  RCAEval sample: {len(sample)} cases across "
           f"{len(set(s.get('fault_type') for s in sample))} fault types, "
-          f"{len(set(s.get('service') for s in sample))} services")
+          f"{len(set(s.get('service') for s in sample))} services "
+          f"({', '.join(sorted(set(s.get('system','?') for s in sample)))})")
     return sample
 
 
 def _build_rcaeval_prompt(seq):
-    """Build a concise prompt from a RCAEval sequence dict."""
-    lines = [
-        f"Case: {seq.get('case_id', 'unknown')}",
-        f"System: {seq.get('system', 'unknown')}",
-        f"Fault Injection Time: {seq.get('inject_time', 'unknown')}",
-        "",
-    ]
+    """
+    Build a diagnostic prompt using before/after metric deltas around the
+    fault injection time.  This is the key improvement over the old version
+    which only showed raw averages — the delta immediately highlights the
+    anomalous service.
+    """
+    import numpy as np
 
-    # Metrics summary
+    inject_time = seq.get("inject_time", 0)
+    case_id     = seq.get("case_id", "unknown")
+    system      = seq.get("system", "unknown")
+    lines       = []
+
+    lines.append(f"Case: {case_id}")
+    lines.append(f"System: {system}")
+    lines.append(f"Fault Injection Timestamp: {inject_time}")
+    lines.append("")
+
+    # ── Metric delta analysis ─────────────────────────────────────────────
     metrics = seq.get("metrics_data", {})
-    if metrics:
-        lines.append("METRICS (avg over window):")
-        time_col = metrics.get("time", [])
-        for col, vals in metrics.items():
-            if col == "time" or not vals:
-                continue
-            try:
-                avg = sum(vals) / len(vals)
-                mx  = max(vals)
-                lines.append(f"  {col}: avg={avg:.2f}, max={mx:.2f}")
-            except Exception:
-                pass
-        lines.append("")
+    if metrics and inject_time:
+        time_vals = metrics.get("time", [])
 
-    # Logs (first 15)
+        # Build parallel arrays: time → index
+        before_idx = [i for i, t in enumerate(time_vals) if t < inject_time]
+        after_idx  = [i for i, t in enumerate(time_vals) if t >= inject_time]
+
+        if before_idx and after_idx:
+            # Extract service names from metric column names
+            # Columns look like: adservice_cpu, adservice_mem, adservice_latency …
+            all_cols = [c for c in metrics if c != "time" and metrics[c]]
+            services = sorted(set(
+                "_".join(c.split("_")[:-1])
+                for c in all_cols
+                if "_" in c
+            ))
+
+            lines.append(f"SERVICES IN THIS SYSTEM: {', '.join(services)}")
+            lines.append("")
+
+            # Compute per-metric before/after means and ratio
+            metric_deltas = []
+            for col in all_cols:
+                vals = metrics[col]
+                try:
+                    b_mean = float(np.mean([vals[i] for i in before_idx]))
+                    a_mean = float(np.mean([vals[i] for i in after_idx]))
+                    a_max  = float(np.max([vals[i] for i in after_idx]))
+                    # ratio: how many times larger is after vs before?
+                    ratio  = (a_mean / b_mean) if b_mean > 0.01 else (a_mean if a_mean > 0 else 0)
+                    metric_deltas.append((col, b_mean, a_mean, a_max, ratio))
+                except Exception:
+                    pass
+
+            # Sort by ratio descending — most anomalous first
+            metric_deltas.sort(key=lambda x: x[4], reverse=True)
+
+            lines.append("METRIC ANOMALY RANKING (sorted by after/before ratio, highest = most anomalous):")
+            lines.append(f"  {'Metric':<45} {'Before':>10} {'After(avg)':>12} {'After(max)':>12} {'Ratio':>8}")
+            lines.append("  " + "-" * 93)
+
+            # Show top 15 most anomalous metrics
+            for col, b, a, mx, ratio in metric_deltas[:15]:
+                ratio_str = f"{ratio:.1f}x" if ratio < 1000 else ">999x"
+                lines.append(f"  {col:<45} {b:>10.2f} {a:>12.2f} {mx:>12.2f} {ratio_str:>8}")
+
+            lines.append("")
+
+            # Per-service summary: show the single most anomalous metric per service
+            lines.append("PER-SERVICE SUMMARY (worst metric per service):")
+            service_worst = {}
+            for col, b, a, mx, ratio in metric_deltas:
+                svc = "_".join(col.split("_")[:-1]) if "_" in col else col
+                if svc not in service_worst or ratio > service_worst[svc][4]:
+                    service_worst[svc] = (col, b, a, mx, ratio)
+
+            # Sort services by their worst ratio
+            sorted_svcs = sorted(service_worst.items(), key=lambda x: x[1][4], reverse=True)
+            for svc, (col, b, a, mx, ratio) in sorted_svcs:
+                metric_type = col.split("_")[-1] if "_" in col else col
+                ratio_str   = f"{ratio:.1f}x" if ratio < 1000 else ">999x"
+                lines.append(f"  {svc:<35} peak metric={metric_type:<12} "
+                              f"before={b:.1f}  after_avg={a:.1f}  after_max={mx:.1f}  ratio={ratio_str}")
+            lines.append("")
+
+        else:
+            # Fallback: no time alignment possible, show raw averages
+            lines.append("METRICS (raw averages — no injection time alignment):")
+            for col, vals in metrics.items():
+                if col == "time" or not vals:
+                    continue
+                try:
+                    avg = sum(vals) / len(vals)
+                    mx  = max(vals)
+                    lines.append(f"  {col}: avg={avg:.2f}, max={mx:.2f}")
+                except Exception:
+                    pass
+            lines.append("")
+
+    # ── Logs (first 20, only if present) ─────────────────────────────────
     logs = seq.get("logs_data")
     if logs is not None:
         try:
-            log_rows = logs.head(15).to_dict("records") if hasattr(logs, "head") else logs[:15]
-            lines.append(f"LOGS (first {min(15, len(log_rows))} of {len(logs)}):")
+            log_rows = logs.head(20).to_dict("records") if hasattr(logs, "head") else logs[:20]
+            lines.append(f"LOGS (first {len(log_rows)}):")
             for row in log_rows:
+                svc = row.get("container_name", row.get("service", ""))
                 msg = row.get("message", row.get("content", str(row)))
-                lines.append(f"  {msg[:120]}")
+                lvl = row.get("level", "")
+                prefix = f"[{svc}][{lvl}] " if svc else ""
+                lines.append(f"  {prefix}{str(msg)[:120]}")
             lines.append("")
         except Exception:
             pass
 
-    # Traces (first 10)
+    # ── Traces (first 10, only if present) ───────────────────────────────
     traces = seq.get("traces_data")
     if traces is not None:
         try:
             trace_rows = traces.head(10).to_dict("records") if hasattr(traces, "head") else traces[:10]
-            lines.append(f"TRACES (first {min(10, len(trace_rows))}):")
+            lines.append(f"TRACES (first {len(trace_rows)}):")
             for row in trace_rows:
-                svc  = row.get("service", row.get("serviceName", "?"))
+                svc  = row.get("serviceName", row.get("service", "?"))
                 dur  = row.get("duration", row.get("latency", "?"))
-                stat = row.get("status", row.get("statusCode", "?"))
-                lines.append(f"  service={svc}  duration={dur}  status={stat}")
+                stat = row.get("statusCode", row.get("status", "?"))
+                op   = row.get("operationName", row.get("methodName", ""))
+                lines.append(f"  service={svc:<30} op={op:<35} duration={dur}  status={stat}")
             lines.append("")
         except Exception:
             pass
 
-    lines.append("Based on the evidence above, identify the root cause service and fault type.")
+    lines.append("TASK: Based on the metric anomaly ranking above, identify:")
+    lines.append("  1. Which service has the largest spike after the injection time → that is the root cause service")
+    lines.append("  2. Which metric type spiked (cpu/mem/disk/latency→delay/error→loss) → that is the fault type")
     return "\n".join(lines)
 
 
 def _parse_rcaeval_response(response, seq):
     """Extract predicted service and fault type from model response."""
-    resp_lower = response.lower()
     predicted_service = "unknown"
     predicted_fault   = "unknown"
     confidence        = 0.5
 
     for line in response.split("\n"):
-        ll = line.lower()
-        if "root cause service:" in ll:
-            predicted_service = line.split(":", 1)[-1].strip().lower()
-        elif "fault type:" in ll:
-            predicted_fault = line.split(":", 1)[-1].strip().lower()
-        elif "confidence:" in ll:
+        ll = line.lower().strip()
+        # Service — accept several phrasings
+        if ll.startswith("root cause service:") or ll.startswith("root cause:"):
+            val = line.split(":", 1)[-1].strip().lower()
+            # Strip common noise like "the", quotes, brackets
+            val = val.strip('"\'[]').replace("the ", "").strip()
+            if val:
+                predicted_service = val
+        # Fault type
+        elif ll.startswith("fault type:") or ll.startswith("fault:"):
+            val = line.split(":", 1)[-1].strip().lower()
+            val = val.strip('"\'[]').strip()
+            if val:
+                predicted_fault = val
+        # Confidence
+        elif ll.startswith("confidence:"):
             try:
                 conf_str = line.split(":", 1)[-1].strip().replace("%", "").strip()
                 confidence = float(conf_str) / 100.0
@@ -240,15 +373,29 @@ def _parse_rcaeval_response(response, seq):
     actual_service = seq.get("root_cause_service", seq.get("service", "unknown"))
     actual_fault   = seq.get("fault_type", "unknown")
 
+    # Normalise fault type aliases the model might use
+    fault_aliases = {
+        "latency": "delay", "network delay": "delay", "response time": "delay",
+        "packet loss": "loss", "network loss": "loss", "error rate": "loss",
+        "memory": "mem", "memory leak": "mem",
+        "cpu stress": "cpu", "cpu spike": "cpu",
+        "disk i/o": "disk", "disk io": "disk",
+    }
+    for alias, canonical in fault_aliases.items():
+        if alias in predicted_fault:
+            predicted_fault = canonical
+            break
+
     # Flexible match: predicted contains actual or vice versa
     service_correct = (
         actual_service.lower() in predicted_service or
         predicted_service in actual_service.lower()
-    )
+    ) and predicted_service != "unknown"
+
     fault_correct = (
         actual_fault.lower() in predicted_fault or
         predicted_fault in actual_fault.lower()
-    )
+    ) and predicted_fault != "unknown"
 
     return {
         "case_id":            seq.get("case_id"),

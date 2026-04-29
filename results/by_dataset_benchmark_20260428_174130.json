@@ -1,0 +1,1503 @@
+{
+  "hdfs": {
+    "openai/gpt-oss-120b": {
+      "display_name": "GPT-OSS 120B",
+      "metrics": {
+        "tp": 13,
+        "fp": 14,
+        "tn": 1,
+        "fn": 2,
+        "precision": 0.48148148148148145,
+        "recall": 0.8666666666666667,
+        "f1": 0.6190476190476191,
+        "accuracy": 0.4666666666666667,
+        "elapsed_sec": 335.9,
+        "errors": 0,
+        "model": "openai/gpt-oss-120b",
+        "display_name": "GPT-OSS 120B",
+        "provider": "groq"
+      },
+      "predictions": [
+        {
+          "block_id": "blk_8652779608730262978",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-8818836468975795986",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8693960090226565974",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2075234716713999208",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9134391641163987789",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8528642966277767480",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6806497011036089908",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-4766592832564589428",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9009365188330241461",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8745019905349343550",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_43482893556276394",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-511058354155453697",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5304178986508314412",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3093127367153705019",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-1968007884603578540",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-6351309833986612599",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-1577830978049349432",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5472366049560759167",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-8120118743897862909",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2801218189631186974",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8586544123689943463",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2986822300704311308",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5143286617671754617",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7392010738495470190",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_1452575498208233649",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-2824064955348406797",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6830647897035533836",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3953559589275347835",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-9073992586687739851",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7503483334202473044",
+          "predicted_anomaly": false
+        }
+      ],
+      "ground_truth": [
+        {
+          "block_id": "blk_8652779608730262978",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-8818836468975795986",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8693960090226565974",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_2075234716713999208",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9134391641163987789",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8528642966277767480",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_6806497011036089908",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-4766592832564589428",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9009365188330241461",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8745019905349343550",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_43482893556276394",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-511058354155453697",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-5304178986508314412",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_3093127367153705019",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-1968007884603578540",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-6351309833986612599",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-1577830978049349432",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5472366049560759167",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-8120118743897862909",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2801218189631186974",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8586544123689943463",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2986822300704311308",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5143286617671754617",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7392010738495470190",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_1452575498208233649",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-2824064955348406797",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_6830647897035533836",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_3953559589275347835",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-9073992586687739851",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7503483334202473044",
+          "actual_anomaly": false
+        }
+      ]
+    },
+    "qwen/qwen3-32b": {
+      "display_name": "Qwen3 32B",
+      "metrics": {
+        "tp": 13,
+        "fp": 13,
+        "tn": 2,
+        "fn": 2,
+        "precision": 0.5,
+        "recall": 0.8666666666666667,
+        "f1": 0.6341463414634146,
+        "accuracy": 0.5,
+        "elapsed_sec": 678.9,
+        "errors": 0,
+        "model": "qwen/qwen3-32b",
+        "display_name": "Qwen3 32B",
+        "provider": "groq"
+      },
+      "predictions": [
+        {
+          "block_id": "blk_8652779608730262978",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-8818836468975795986",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8693960090226565974",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2075234716713999208",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9134391641163987789",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8528642966277767480",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_6806497011036089908",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-4766592832564589428",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9009365188330241461",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8745019905349343550",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_43482893556276394",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-511058354155453697",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5304178986508314412",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3093127367153705019",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-1968007884603578540",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-6351309833986612599",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-1577830978049349432",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5472366049560759167",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-8120118743897862909",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2801218189631186974",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8586544123689943463",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2986822300704311308",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5143286617671754617",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7392010738495470190",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_1452575498208233649",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-2824064955348406797",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6830647897035533836",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3953559589275347835",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-9073992586687739851",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_7503483334202473044",
+          "predicted_anomaly": false
+        }
+      ],
+      "ground_truth": [
+        {
+          "block_id": "blk_8652779608730262978",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-8818836468975795986",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8693960090226565974",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_2075234716713999208",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9134391641163987789",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8528642966277767480",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_6806497011036089908",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-4766592832564589428",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9009365188330241461",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8745019905349343550",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_43482893556276394",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-511058354155453697",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-5304178986508314412",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_3093127367153705019",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-1968007884603578540",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-6351309833986612599",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-1577830978049349432",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5472366049560759167",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-8120118743897862909",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2801218189631186974",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8586544123689943463",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2986822300704311308",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5143286617671754617",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7392010738495470190",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_1452575498208233649",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-2824064955348406797",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_6830647897035533836",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_3953559589275347835",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-9073992586687739851",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7503483334202473044",
+          "actual_anomaly": false
+        }
+      ]
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "display_name": "Llama 4 Scout 17B",
+      "metrics": {
+        "tp": 14,
+        "fp": 15,
+        "tn": 0,
+        "fn": 1,
+        "precision": 0.4827586206896552,
+        "recall": 0.9333333333333333,
+        "f1": 0.6363636363636364,
+        "accuracy": 0.4666666666666667,
+        "elapsed_sec": 39.8,
+        "errors": 0,
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "display_name": "Llama 4 Scout 17B",
+        "provider": "groq"
+      },
+      "predictions": [
+        {
+          "block_id": "blk_8652779608730262978",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-8818836468975795986",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8693960090226565974",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2075234716713999208",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9134391641163987789",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8528642966277767480",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6806497011036089908",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-4766592832564589428",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_9009365188330241461",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8745019905349343550",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_43482893556276394",
+          "predicted_anomaly": false
+        },
+        {
+          "block_id": "blk_-511058354155453697",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5304178986508314412",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3093127367153705019",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-1968007884603578540",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-6351309833986612599",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-1577830978049349432",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5472366049560759167",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-8120118743897862909",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2801218189631186974",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_8586544123689943463",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_2986822300704311308",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-5143286617671754617",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7392010738495470190",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_1452575498208233649",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-2824064955348406797",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_6830647897035533836",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_3953559589275347835",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_-9073992586687739851",
+          "predicted_anomaly": true
+        },
+        {
+          "block_id": "blk_7503483334202473044",
+          "predicted_anomaly": true
+        }
+      ],
+      "ground_truth": [
+        {
+          "block_id": "blk_8652779608730262978",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-8818836468975795986",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8693960090226565974",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_2075234716713999208",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9134391641163987789",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8528642966277767480",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_6806497011036089908",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-4766592832564589428",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_9009365188330241461",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_8745019905349343550",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_43482893556276394",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-511058354155453697",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-5304178986508314412",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_3093127367153705019",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-1968007884603578540",
+          "actual_anomaly": true
+        },
+        {
+          "block_id": "blk_-6351309833986612599",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-1577830978049349432",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5472366049560759167",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-8120118743897862909",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2801218189631186974",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_8586544123689943463",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_2986822300704311308",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-5143286617671754617",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7392010738495470190",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_1452575498208233649",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-2824064955348406797",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_6830647897035533836",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_3953559589275347835",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_-9073992586687739851",
+          "actual_anomaly": false
+        },
+        {
+          "block_id": "blk_7503483334202473044",
+          "actual_anomaly": false
+        }
+      ]
+    }
+  },
+  "rcaeval": {
+    "openai/gpt-oss-120b": {
+      "display_name": "GPT-OSS 120B",
+      "metrics": {
+        "total": 20,
+        "service_accuracy": 0.55,
+        "fault_accuracy": 0.45,
+        "both_accuracy": 0.3,
+        "avg_confidence": 0.958,
+        "elapsed_sec": 242.9,
+        "errors": 0,
+        "model": "openai/gpt-oss-120b",
+        "display_name": "GPT-OSS 120B",
+        "provider": "groq"
+      },
+      "results": [
+        {
+          "case_id": "RE1-OB_productcatalogservice_cpu_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_cpu_1",
+          "predicted_service": "currencyservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_cartservice_cpu_1",
+          "predicted_service": "cartservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_cpu_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_adservice_mem_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_mem_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_cartservice_mem_1",
+          "predicted_service": "cartservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_mem_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "mem",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_disk_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_adservice_disk_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_disk_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "delay",
+          "actual_fault": "disk",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_disk_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "delay",
+          "actual_fault": "disk",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_cartservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": true,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": true,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_adservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": true,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_adservice_loss_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_loss_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "delay",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_loss_1",
+          "predicted_service": "recommendationservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "delay",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_cartservice_loss_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "delay",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        }
+      ]
+    },
+    "qwen/qwen3-32b": {
+      "display_name": "Qwen3 32B",
+      "metrics": {
+        "total": 20,
+        "service_accuracy": 0.55,
+        "fault_accuracy": 0.4,
+        "both_accuracy": 0.35,
+        "avg_confidence": 0.786,
+        "elapsed_sec": 485.0,
+        "errors": 0,
+        "model": "qwen/qwen3-32b",
+        "display_name": "Qwen3 32B",
+        "provider": "groq"
+      },
+      "results": [
+        {
+          "case_id": "RE1-OB_productcatalogservice_cpu_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_cpu_1",
+          "predicted_service": "currencyservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_cartservice_cpu_1",
+          "predicted_service": "cartservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_cpu_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_adservice_mem_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_mem_1",
+          "predicted_service": "unknown",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "mem",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-OB_cartservice_mem_1",
+          "predicted_service": "cartservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "mem",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_mem_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "mem",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_disk_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_adservice_disk_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_disk_1",
+          "predicted_service": "unknown",
+          "actual_service": "currencyservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "disk",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_disk_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_cartservice_delay_1",
+          "predicted_service": "unknown",
+          "actual_service": "cartservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_delay_1",
+          "predicted_service": "unknown",
+          "actual_service": "currencyservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-OB_adservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": true,
+          "both_correct": false,
+          "confidence": 0.98
+        },
+        {
+          "case_id": "RE1-OB_adservice_loss_1",
+          "predicted_service": "unknown",
+          "actual_service": "adservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_loss_1",
+          "predicted_service": "unknown",
+          "actual_service": "currencyservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_loss_1",
+          "predicted_service": "unknown",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        },
+        {
+          "case_id": "RE1-OB_cartservice_loss_1",
+          "predicted_service": "unknown",
+          "actual_service": "cartservice",
+          "predicted_fault": "unknown",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.5
+        }
+      ]
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "display_name": "Llama 4 Scout 17B",
+      "metrics": {
+        "total": 20,
+        "service_accuracy": 0.75,
+        "fault_accuracy": 0.55,
+        "both_accuracy": 0.45,
+        "avg_confidence": 0.94,
+        "elapsed_sec": 59.6,
+        "errors": 0,
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "display_name": "Llama 4 Scout 17B",
+        "provider": "groq"
+      },
+      "results": [
+        {
+          "case_id": "RE1-OB_productcatalogservice_cpu_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_cpu_1",
+          "predicted_service": "currencyservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_cartservice_cpu_1",
+          "predicted_service": "cartservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_cpu_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "cpu",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_adservice_mem_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_mem_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "mem",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.99
+        },
+        {
+          "case_id": "RE1-OB_cartservice_mem_1",
+          "predicted_service": "cartservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_mem_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "mem",
+          "actual_fault": "mem",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_disk_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_adservice_disk_1",
+          "predicted_service": "adservice",
+          "actual_service": "adservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 1.0
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_disk_1",
+          "predicted_service": "currencyservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "disk",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.8
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_disk_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "cpu",
+          "actual_fault": "disk",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_cartservice_delay_1",
+          "predicted_service": "cartservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_checkoutservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "checkoutservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": true,
+          "fault_correct": true,
+          "both_correct": true,
+          "confidence": 0.95
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": true,
+          "both_correct": false,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_adservice_delay_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "delay",
+          "service_correct": false,
+          "fault_correct": true,
+          "both_correct": false,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_adservice_loss_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "adservice",
+          "predicted_fault": "delay",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_currencyservice_loss_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "currencyservice",
+          "predicted_fault": "delay",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.9
+        },
+        {
+          "case_id": "RE1-OB_productcatalogservice_loss_1",
+          "predicted_service": "productcatalogservice",
+          "actual_service": "productcatalogservice",
+          "predicted_fault": "mem",
+          "actual_fault": "loss",
+          "service_correct": true,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.8
+        },
+        {
+          "case_id": "RE1-OB_cartservice_loss_1",
+          "predicted_service": "checkoutservice",
+          "actual_service": "cartservice",
+          "predicted_fault": "delay",
+          "actual_fault": "loss",
+          "service_correct": false,
+          "fault_correct": false,
+          "both_correct": false,
+          "confidence": 0.9
+        }
+      ]
+    }
+  }
+}
